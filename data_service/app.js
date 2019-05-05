@@ -19,8 +19,6 @@ app.use('/stateToCode',  titlecasesRoutes);
 const hashRoutes = require('./routes/states_hash')
 app.use('/codeToState', hashRoutes);
 
-
-
 app.use((req, res, next) => {
     req.header('Access-Controll-Allow-Orgin','*');
     req.header(
@@ -33,6 +31,5 @@ app.use((req, res, next) => {
     }
     next();
 });
-
 
 module.exports = app;
